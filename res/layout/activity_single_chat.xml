@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0" >
+
+    <TextView
+        android:id="@+id/tv_singleChatTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="悄悄话"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="#65c5f6" />
+
+</LinearLayout>

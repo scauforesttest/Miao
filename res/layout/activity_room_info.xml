@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical"
+     >
+
+    <RelativeLayout android:layout_height="50dp"
+	    android:layout_width="fill_parent"
+	    android:id="@+id/rl_roomchatpage"
+	    android:background="#65c5f6">
+
+	    <TextView
+	        android:id="@+id/tv_roomInfo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:text="房间信息"
+	        android:textColor="#ffffff"
+	        android:textSize="20sp" />
+
+	    <ImageButton
+	        android:id="@+id/ib_back"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentLeft="true"
+	        android:background="@null"
+	        android:paddingLeft="5dp"
+	        android:scaleType="centerInside"
+	        android:src="@drawable/back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/white"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/iv_roomPic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/default_pic" />
+
+        <TextView
+            android:id="@+id/tv_roomNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_roomPic"
+            android:text="聊天室  001"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_roomTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_roomNum"
+            android:layout_marginTop="50dp"
+            android:text="主题: 互联网创业"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_maxPopulation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_roomNum"
+            android:layout_alignBottom="@+id/tv_roomNum"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="最大人数   100"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+	    
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/white" >
+
+        <TextView
+            android:id="@+id/tv_roomMaster"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="房主:"
+            android:textColor="#65c5f6"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_roomIntroduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_roomIntroduce"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp"
+            android:text="专注互联网创业，聚集创业者智慧结晶，让我们大干一场吧！"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_masterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_roomMaster"
+            android:layout_alignBottom="@+id/tv_roomMaster"
+            android:layout_toRightOf="@+id/tv_roomIntroduce"
+            android:paddingLeft="10dp"
+            android:text="someOne"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_space"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_alignLeft="@+id/tv_roomIntroduction"
+            android:layout_below="@+id/tv_roomIntroduction"
+             />
+
+        <TextView
+            android:id="@+id/tv_roomIntroduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_roomIntroduction"
+            android:layout_below="@+id/tv_roomMaster"
+            android:layout_marginTop="28dp"
+            android:text="房间简介:"
+            android:textColor="#65c5f6"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_roomCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_roomIntroduce"
+            android:layout_below="@+id/tv_roomMaster"
+            android:text="创建时间:"
+            android:textColor="#65c5f6"
+            android:textSize="15sp"
+             />
+
+        <TextView
+            android:id="@+id/tv_roomCreatedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_roomCreated"
+            android:layout_alignLeft="@+id/tv_masterName"
+            android:paddingLeft="10dp"
+            android:text="2014-01-01"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

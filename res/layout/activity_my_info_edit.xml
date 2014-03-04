@@ -1,0 +1,300 @@
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#65c5f6"  >
+        <TextView
+        android:id="@+id/tv_editInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改信息"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        />
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="5dp"
+            android:src="@drawable/back" 
+            android:background="@null"
+            android:scaleType="centerInside"/>
+        
+    </RelativeLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical" >
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:background="@drawable/white" >
+
+              <ImageView
+                  android:id="@+id/iv_myPic"
+                  android:layout_width="60dp"
+                  android:layout_height="60dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_centerVertical="true"
+                  android:layout_margin="10dp"
+                  android:src="@drawable/head_img" />
+
+              <EditText 
+                  android:id="@+id/et_myNickName"
+                  android:layout_width="100dp"
+                  android:layout_height="35dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_toRightOf="@+id/iv_myPic"
+                  android:text="我的昵称"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <EditText 
+                  android:id="@+id/et_myMotto"
+                  android:layout_width="fill_parent"
+                  android:layout_height="35dp"
+                  android:layout_alignLeft="@+id/et_myNickName"
+                  android:layout_marginTop="45dp"
+                  android:layout_marginRight="10dp"
+                  android:text="座右铭"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <TextView
+                  android:id="@+id/tv_myLevel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBaseline="@+id/et_myNickName"
+                  android:layout_alignBottom="@+id/et_myNickName"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="10dp"
+                  android:text="我的等级"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:layout_marginRight="5dp"
+              android:background="@drawable/white" >
+
+              <TextView
+                  android:id="@+id/tv_Name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentTop="true"
+                  android:layout_margin="20dp"
+                  android:text="姓名:"
+                  android:textColor="#65c5f6"
+                  android:textSize="15sp" />
+
+              <EditText
+                  android:id="@+id/et_myName"
+                  android:layout_width="100dp"
+                  android:layout_height="35dp"
+                  android:layout_alignBaseline="@+id/tv_Name"
+                  android:layout_alignBottom="@+id/tv_Name"
+                  android:layout_toRightOf="@+id/tv_Name"
+                  android:text="我的名字"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <TextView
+                  android:id="@+id/tv_animal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/tv_Name"
+                  android:layout_marginLeft="20dp"
+                  android:text="生肖:"
+                  android:textColor="#65c5f6"
+                  android:textSize="15sp" />
+
+              <EditText 
+                  android:id="@+id/et_myAnimal"
+                  android:layout_width="100dp"
+                  android:layout_height="35dp"
+                  android:layout_alignBaseline="@+id/tv_animal"
+                  android:layout_alignBottom="@+id/tv_animal"
+                  android:layout_alignLeft="@+id/et_myName"
+                  android:text="我的生肖"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <EditText 
+                  android:id="@+id/et_myAge"
+                  android:layout_width="100dp"
+                  android:layout_height="35dp"
+                  android:layout_alignBaseline="@+id/tv_age"
+                  android:layout_alignBottom="@+id/tv_age"
+                  android:layout_alignLeft="@+id/et_myAnimal"
+                  android:text="我的年龄"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <TextView
+                  android:id="@+id/tv_Sex"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignLeft="@+id/tv_age"
+                  android:layout_below="@+id/tv_age"
+                  android:layout_marginTop="20dp"
+                  android:text="性别:"
+                  android:textColor="#65c5f6"
+                  android:textSize="15sp" />
+
+              <TextView
+                  android:id="@+id/tv_birthday"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignLeft="@+id/tv_Sex"
+                  android:layout_below="@+id/tv_Sex"
+                  android:layout_marginTop="20dp"
+                  android:text="生日:"
+                  android:textColor="#65c5f6"
+                  android:textSize="15sp" />
+
+              <TextView
+                  android:id="@+id/tv_age"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignLeft="@+id/tv_animal"
+                  android:layout_below="@+id/tv_animal"
+                  android:layout_marginTop="20dp"
+                  android:text="年龄:"
+                  android:textColor="#65c5f6"
+                  android:textSize="15sp" />
+
+              <TextView
+                  android:id="@+id/tv_miao"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignLeft="@+id/tv_birthday"
+                  android:layout_below="@+id/tv_birthday"
+                  android:layout_marginTop="20dp"
+                  android:text="喵龄:"
+                  android:textColor="#65c5f6"
+                  android:textSize="15sp" />
+
+              <EditText
+                  android:id="@+id/et_myBirthday"
+                  android:layout_width="100dp"
+                  android:layout_height="35dp"
+                  android:layout_alignBaseline="@+id/tv_birthday"
+                  android:layout_alignBottom="@+id/tv_birthday"
+                  android:layout_alignLeft="@+id/et_mySex"
+                  android:text="我的生日"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <TextView 
+                  android:id="@+id/tv_myMiaoAge"
+                   android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignBaseline="@+id/tv_miao"
+                  android:layout_alignBottom="@+id/tv_miao"
+                  android:layout_alignLeft="@+id/et_myBirthday"
+                  android:text="我的喵龄"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <EditText
+                  android:id="@+id/et_mySex"
+                  android:layout_width="100dp"
+                  android:layout_height="35dp"
+                  android:layout_alignBaseline="@+id/tv_Sex"
+                  android:layout_alignBottom="@+id/tv_Sex"
+                  android:layout_alignLeft="@+id/et_myAge"
+                  android:ems="10"
+                  android:text="我的性别"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+             <TextView
+                  android:id="@+id/textView3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="10dp"
+                  android:layout_below="@+id/tv_miao" />
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:background="@drawable/white" >
+
+              <TextView
+                  android:id="@+id/tv_show"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_margin="10dp"
+                  android:text="个性秀:"
+                  android:textColor="#65c5f6"
+                  android:textSize="15sp" />
+
+              <EditText 
+                  android:id="@+id/et_myShow"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignLeft="@+id/tv_show"
+                  android:layout_below="@+id/tv_show"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:text="爱生活，爱运动，青春阳光，活力自信！"
+                  android:textColor="#666666"
+                  android:textSize="15sp" />
+
+              <TextView
+                  android:id="@+id/textView1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="10dp"
+                  android:layout_below="@+id/et_myShow" />
+
+             
+             
+          </RelativeLayout>
+          
+		  <RelativeLayout
+		      android:layout_width="match_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_margin="5dp" >
+              <Button android:id="@+id/btn_myInfoSubmit"
+                  android:layout_width="100dp"
+                  android:layout_height="50dp"
+                  android:layout_centerInParent="true"
+                  android:background="@drawable/button_bg"
+                  android:gravity="center"
+                  android:text="提交"
+                  android:textSize="18sp"
+                  android:textColor="#ffffff"
+                  />
+		  </RelativeLayout>
+	
+      </LinearLayout>
+  </ScrollView>
+
+  
+</LinearLayout>
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.miao.main"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.miao.main.LoginActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.miao.main.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.miao.roomchat.RoomChat"
+            android:label="@string/title_activity_room_chat" >
+        </activity>
+        <activity
+            android:name="com.miao.me.Me"
+            android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name="com.miao.singlechat.SingleChat"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        <activity
+            android:name="com.miao.zoom.Zoom"
+            android:label="@string/title_activity_zoom" >
+        </activity>
+        <activity
+            android:name="com.miao.main.MainWindow"
+            android:label="@string/title_activity_main_window" >
+        </activity>
+        <activity
+            android:name="com.miao.roomchat.RoomChatPage"
+            android:label="@string/title_activity_room_chat_page" >
+        </activity>
+        <activity
+            android:name="com.miao.roomchat.RoomSearchActivity"
+            android:label="@string/title_activity_room_search" >
+        </activity>
+        <activity
+            android:name="com.miao.roomchat.RoomInfoActivity"
+            android:label="@string/title_activity_room_info" >
+        </activity>
+        <activity
+            android:name="com.miao.me.MyInfoEdit"
+            android:label="@string/title_activity_my_info_edit" >
+        </activity>
+        <activity
+            android:name="com.miao.me.MyShowEdit"
+            android:label="@string/title_activity_my_show_edit" >
+        </activity>
+        <activity
+            android:name="com.miao.me.MeEdit"
+            android:label="@string/title_activity_me_edit" >
+        </activity>
+        <activity
+            android:name="com.miao.me.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name="com.miao.me.NewMsgAlert"
+            android:label="@string/title_activity_new_msg_alert" >
+        </activity>
+        <activity
+            android:name="com.miao.me.ThemeActivity"
+            android:label="@string/title_activity_theme" >
+        </activity>
+        <activity
+            android:name="com.miao.me.AboutUs"
+            android:label="@string/title_activity_about_us" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="#ffffff"
+    	android:orientation="vertical"
+    	    >
+    	    <TabHost android:id="@android:id/tabhost"
+    	        android:layout_width="fill_parent"
+    	        android:layout_height="fill_parent"
+    	        >
+ 				
+    	        <LinearLayout
+    	            android:layout_width="fill_parent"
+    	            android:layout_height="fill_parent"
+    	            android:orientation="vertical"
+    	            >
+    	            
+    	           
+ 				<FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" >
+         	   </FrameLayout>
+    	            
+    	            <TabWidget 
+    	                android:id="@android:id/tabs"
+    	                android:layout_width="fill_parent"
+    	                android:layout_height="fill_parent"
+    	                android:visibility="gone"
+    	                />
+    	            <RelativeLayout 
+    	                android:id="@+id/rl_bottom"
+    	                android:layout_width="fill_parent"
+    	                android:layout_height="wrap_content"
+    	              >
+    	                <RadioGroup android:id="@+id/rg_main"
+    	                    android:layout_height="50dp"
+    	                    android:layout_width="fill_parent"
+    	                    android:layout_gravity="bottom"
+    	                    android:orientation="horizontal"
+    	                    android:background="#000000"
+    	                    >
+    	                    <RadioButton android:id="@+id/rb_privateChat"
+    	                        android:background="@drawable/private_chat_bg"
+    	                        android:layout_width="0dip"
+    	                        android:layout_weight="1"
+    	                        android:layout_height="fill_parent"
+    	                        android:button="@null"
+    	                        />
+    	                    <RadioButton android:id="@+id/rb_roomChat"
+    	                        android:layout_width="0dip"
+    	                        android:layout_weight="1"
+    	                        android:layout_height="fill_parent"
+    	                        android:button="@null"
+    	                        android:background="@drawable/room_chat_bg"
+    	                        />
+    	                    
+    	                    <!--
+    	                    <RadioButton android:id="@+id/rb_main"
+    	                        android:layout_width="0dip"
+    	                        android:layout_weight="1"
+    	                        android:layout_height="fill_parent"
+    	                        android:button="@null"
+    	                        android:background="@drawable/main_bg"
+    	                        />
+    	                          -->
+    	                          
+    	                    <RadioButton 
+    	                        android:id="@+id/rb_me"
+    	                        android:layout_width="0dip"
+    	                        android:layout_weight="1"
+    	                        android:layout_height="fill_parent"
+    	                        android:button="@null"
+    	                        android:background="@drawable/me_bg"
+    	                        />
+    	                    <RadioButton android:id="@+id/rb_zoom"
+    	                        android:layout_width="0dip"
+    	                        android:layout_weight="1"
+    	                        android:layout_height="fill_parent"
+    	                        android:button="@null"
+    	                        android:background="@drawable/zoom_bg"
+    	                        />
+    	                    
+    	                    
+    	                </RadioGroup>
+    	            </RelativeLayout>
+    	            </LinearLayout>
+    	    </TabHost>
+</LinearLayout>
+<!-- 
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bottombg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/dongtai"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/tab_dongtai_selector"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        android:button="@null"
+                         />
+
+                    <RadioButton
+                        android:id="@+id/wanshang"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/tab_wanshang_selector"
+                        android:layout_weight="1"
+                        android:button="@null" />
+
+                    <RadioButton
+                        android:id="@+id/shangcheng"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/tab_shangcheng_selector"
+                        android:layout_weight="1"
+                        android:button="@null" />
+                    <RadioButton
+                        android:id="@+id/me"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/tab_me_selector"
+                        android:layout_weight="1"
+                        android:button="@null" />
+
+                </RadioGroup>
+            </RelativeLayout>
+        </LinearLayout>
+    </TabHost>
+   
+      
+    
+</LinearLayout>  
+ -->
+ 

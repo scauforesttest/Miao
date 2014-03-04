@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+   >
+	<RelativeLayout android:layout_height="50dp"
+	    android:layout_width="fill_parent"
+	    android:id="@+id/rl_roomchatpage"
+	    android:background="#65c5f6">
+	    <TextView android:id="@+id/tv_roomName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:textSize="20sp"
+	        android:textColor="#ffffff"
+	        android:text="房间名"/>
+
+	    <ImageButton
+	        android:id="@+id/ib_back"
+	        android:layout_width="50dp"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentLeft="true"
+	        android:background="@null"
+	        android:paddingLeft="5dp"
+	        android:src="@drawable/back"
+	        android:scaleType="centerInside"
+			/>
+
+	    <ImageButton
+	        android:id="@+id/ib_roomMenu"
+	        android:layout_width="40dp"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentRight="true"
+	        android:background="@drawable/menu"
+	         />
+
+    </RelativeLayout>
+
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/rl_roomchatpage"
+	    android:layout_above="@+id/ll_roomchatpage" >
+
+	    
+	    <!--  -->
+	    <ListView
+	        android:id="@+id/lv_roomChatPage"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:cacheColorHint="#00000000"
+	        android:listSelector="#00000000"
+	        android:divider="@null"
+	        />
+	    
+	</RelativeLayout>
+
+    <LinearLayout android:id="@+id/ll_roomchatpage"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+       >
+
+	            <Button
+	                android:id="@+id/btn_requestSpeech"
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="1"
+	                android:text="抢话筒"
+	                android:gravity="center"
+	                android:textSize="18sp"
+	                android:textColor="#ffffff"
+	                android:background="@drawable/press_bg"
+	                 />
+
+	            <TextView
+	                android:id="@+id/tv_divide"
+	                android:layout_width="1dp"
+	                android:layout_height="fill_parent"
+	                android:background="#dcdcdc" />
+
+	            <Button
+	                android:id="@+id/btn_endSpeech"
+	                android:layout_width="0dp"
+	                android:layout_height="fill_parent"
+	                android:layout_weight="1"
+	                android:background="@drawable/press_bg"
+	                android:gravity="center"
+	                android:text="我讲完了"
+	                android:textColor="#ffffff"
+	                android:textSize="18sp" />
+	            
+	        </LinearLayout>
+</RelativeLayout>
