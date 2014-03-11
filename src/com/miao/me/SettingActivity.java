@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Looper;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -14,9 +14,11 @@ import android.widget.Toast;
 
 import com.miao.main.R;
 
-public class SettingActivity extends Activity {
+public class SettingActivity extends Activity implements Runnable {
 	private ImageButton ib_back;
 	private TableRow tr_newMsgAlert , tr_clearDialog , tr_setTheme ,tr_about ;
+	private Handler handler;
+	private  ProgressDialog  pg;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,7 +53,9 @@ public class SettingActivity extends Activity {
 				startActivity(intent);
 				break;
 			case R.id.tr_clearDialog:
-					Toast.makeText(getApplicationContext(), "清理完毕！", Toast.LENGTH_SHORT).show();
+				
+				 
+				Toast.makeText(getApplicationContext(), "清理完毕！", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.tr_setTheme:
 				intent.setClass(SettingActivity.this,ThemeActivity.class);
@@ -64,6 +68,13 @@ public class SettingActivity extends Activity {
 			default: break;
 			}
 		}
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		handler.postDelayed(SettingActivity.this, 30000);
+
 	}
 
 }
