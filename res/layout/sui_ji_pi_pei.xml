@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 标题 -->
+    <TableLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="60sp"
+        android:background="@color/blue"
+        >
+        <TableRow >
+
+            <ImageView
+                android:id="@+id/fanhui"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/zuojiantou" />
+
+            
+            <TextView 
+                android:id="@+id/sou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/suiji_biaoti"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20sp"
+                android:layout_gravity="center_vertical"
+                >
+                
+            </TextView>
+                
+        </TableRow>
+    </TableLayout>
+	
+   		 <ImageView 
+   		     	android:id="@+id/touxiang"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:src="@drawable/touxiang1"
+        		android:paddingTop="40sp"
+        		android:paddingLeft="120sp"
+        		android:paddingRight="120sp"
+        		android:paddingBottom="40sp"/>
+   		 
+   		 <TextView 
+   		        android:id="@+id/nichen"
+   		        android:layout_width="150sp"
+   		        android:layout_height="40sp"
+   		        android:layout_gravity="center"
+   		        android:text="@string/suiji_nichen"
+   		        android:paddingTop="10sp"
+   		        android:paddingLeft="5sp"
+   		        android:background="@color/blue"/>
+   		 
+   		 <LinearLayout 
+   		        android:layout_width="fill_parent"
+   		        android:layout_height="wrap_content"
+   		        android:orientation="horizontal"
+   		        >
+        <ImageView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="40sp"
+               android:layout_marginTop="30sp"
+               android:layout_marginRight="20sp"
+               android:src="@drawable/duihuabutton"/>
+        
+   		 <ImageView 
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="10sp"
+               android:layout_marginTop="25sp"
+               android:layout_marginRight="40sp"
+               android:src="@drawable/chongxuanbutton"/>
+   		 </LinearLayout>
+</LinearLayout>

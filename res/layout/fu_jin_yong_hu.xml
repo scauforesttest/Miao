@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <!-- 标题 -->
+    <TableLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="60sp"
+        android:background="@color/blue"
+        >
+        <TableRow >
+
+            <ImageView
+                android:id="@+id/fanhui"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginLeft="10sp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/zuojiantou" />
+
+            
+            <TextView 
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xunzhaoji_biaoti"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="10sp"
+                >
+                
+            </TextView>
+                
+        </TableRow>
+    </TableLayout>
+    
+    <!-- 每个小模块都是差不多一样的 -->
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+   	 	<LinearLayout 
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_margin="30sp"
+        	>
+        
+        	<ImageView 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/touxiang4"/>
+        	<ImageView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/jiahaoyou"
+            	android:layout_marginTop="10sp"
+            	android:layout_marginLeft="5sp"/>
+        
+    	</LinearLayout>
+    	
+   	 	<!-- 每个小模块都是差不多一样的 -->
+   	 	<LinearLayout 
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_marginTop="30sp"
+        	android:layout_marginRight="30sp"
+        	>
+        
+        	<ImageView 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/touxiang4"/>
+        	<ImageView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/jiahaoyou"
+            	android:layout_marginTop="10sp"
+            	android:layout_marginLeft="5sp"/>
+        
+    	</LinearLayout>
+    	
+   	 	<LinearLayout 
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_marginTop="30sp"
+        	>
+        
+        	<ImageView 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/touxiang4"/>
+        	<ImageView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/jiahaoyou"
+            	android:layout_marginTop="10sp"
+            	android:layout_marginLeft="5sp"/>
+        
+    	</LinearLayout>
+    </LinearLayout>
+    
+    <!-- 第二行 -->
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+   	 	<LinearLayout 
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_margin="30sp"
+        	>
+        
+        	<ImageView 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/touxiang4"/>
+        	<ImageView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/jiahaoyou"
+            	android:layout_marginTop="10sp"
+            	android:layout_marginLeft="5sp"/>
+        
+    	</LinearLayout>
+    	
+   	 	<!-- 每个小模块都是差不多一样的 -->
+   	 	<LinearLayout 
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_marginTop="30sp"
+        	android:layout_marginRight="30sp"
+        	>
+        
+        	<ImageView 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/touxiang4"/>
+        	<ImageView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/jiahaoyou"
+            	android:layout_marginTop="10sp"
+            	android:layout_marginLeft="5sp"/>
+        
+    	</LinearLayout>
+    	
+   	 	<LinearLayout 
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_marginTop="30sp"
+        	>
+        
+        	<ImageView 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/touxiang4"/>
+        	<ImageView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:src="@drawable/jiahaoyou"
+            	android:layout_marginTop="10sp"
+            	android:layout_marginLeft="5sp"/>
+        
+    	</LinearLayout>
+    </LinearLayout>
+    
+       <ImageView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/chongdingwei"
+           android:layout_marginTop="10sp"
+           android:layout_marginLeft="110sp"/>
+
+</LinearLayout>

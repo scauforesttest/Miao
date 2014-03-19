@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	
+     <!-- 标题 -->
+    <TableLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="60sp"
+        android:background="@color/blue"
+        >
+        <TableRow >
+
+            <ImageView
+                android:id="@+id/fanhui"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/zuojiantou" />
+
+            
+            <TextView 
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gaojisousuo"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="20sp"
+                >
+                
+            </TextView>
+                
+        </TableRow>
+    </TableLayout>
+    <LinearLayout 
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:orientation="horizontal"
+        		>
+        <EditText 
+                android:id="@+id/shuruhaoma"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80sp"
+                android:layout_marginLeft="20sp"
+                android:hint="请输入号码"
+                
+                />
+        <ImageView 
+                android:id="@+id/chazhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85sp"
+                android:layout_marginLeft="20sp"
+                android:src="@drawable/chazhao"/>
+        
+    </LinearLayout>
+    	<LinearLayout 
+    	        android:layout_width="fill_parent"
+    	        android:layout_height="wrap_content"
+    	        android:orientation="vertical"
+    	        android:background="@color/white_gray"
+    	        android:layout_marginTop="30sp"
+    	        
+    	        >
+        
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜到以下结果:"
+                    android:textSize="20sp"
+                    android:layout_marginTop="80sp"
+                    android:layout_marginLeft="20sp"/>
+                    
+               <TableLayout 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+                   <TableRow 
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       
+                       <ImageView 
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/touxiang2"
+                           android:padding="30sp"/>
+                       
+                       <LinearLayout 
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_marginLeft="10sp"
+                           android:layout_marginTop="40sp"
+                           >
+                           
+                           <TextView 
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="小思"
+                               android:textSize="20sp"/>
+                           
+                           <ImageView 
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/jiahaoyou"
+                               android:paddingTop="10sp"/>
+                       </LinearLayout>
+                   </TableRow>
+               </TableLayout>
+                    
+        
+    	</LinearLayout>
+</LinearLayout>

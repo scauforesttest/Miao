@@ -20,5 +20,21 @@
     <string name="title_activity_new_msg_alert">NewMsgAlert</string>
     <string name="title_activity_theme">ThemeActivity</string>
     <string name="title_activity_about_us">AboutUs</string>
+    <!-- cr -->
+    <string name="qiaoqiaohua">悄悄话</string>
+	<string name="nichen1">小思</string>
+	<string name="nichen2">小媛</string>
+	<string name="nichen3">回锅肉</string>
+	<string name="sousuo">搜索界面</string>
+	<string name="sou">搜</string>
+	<string name="xunzhao">寻找附近的人</string>
+	<string name="suiji">随机匹配</string>
+	<string name="gaojisousuo">高级搜索</string>
+	<string name="suiji_biaoti">有缘的喵喵</string>
+	<string name="gaoji_biaoti">号码寻找</string>
+	<string name="xunzhaoji_biaoti">附近的喵喵</string>
+	<string name="suiji_nichen">喵喵昵称:  XXX</string>
+	<string name="danliao_biaoti">聊一聊</string>
+	<string name="haoyouliebiao">好友列表</string>
 
 </resources>

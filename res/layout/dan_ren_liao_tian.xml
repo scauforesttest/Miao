@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/dog">
+    
+	<!-- 标题 -->
+    <TableLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="60sp"
+        android:background="@color/blue"
+        >
+        <TableRow >
+
+            <ImageView
+                android:id="@+id/fanhui"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/zuojiantou" />
+"
+            
+            <TextView 
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/danliao_biaoti"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50sp"
+                >
+                
+            </TextView>
+             
+            <ImageView 
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shezhi"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="60sp"/>
+        </TableRow>
+    </TableLayout>
+    
+    <LinearLayout 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+    <ImageView 
+           android:id="@+id/dog_shoot_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/dog_shoot_btn"
+           android:layout_marginTop="50sp"/>
+    
+    <ImageView 
+           android:id="@+id/dog_playball_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/dog_playball_btn"
+           android:layout_marginTop="50sp"
+           android:layout_marginLeft="150sp"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+    
+    <ImageView 
+           android:id="@+id/dog_findball_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/dog_findball_btn"
+           android:layout_marginTop="150sp"/>
+
+    <ImageView
+        android:id="@+id/jiesuduihua"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="160sp"
+        android:layout_marginLeft="150sp"
+        android:src="@drawable/jiesuduihua" />
+     </LinearLayout>
+     
+    
+</LinearLayout>
