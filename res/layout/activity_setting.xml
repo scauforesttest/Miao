@@ -1,112 +1,112 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/root_style"
-    android:orientation="vertical"
-     >
-   <RelativeLayout   style="@style/title_style" >
-       <TextView android:id="@+id/tv_settingTitle"
-           style="@style/title_text_style"
-           android:text="设置" 
-           />
+    android:orientation="vertical" >
 
-       <ImageButton
-           android:id="@+id/ib_back"
-           android:layout_width="50dp"
-           android:layout_height="50dp"
-           android:src="@drawable/back"
-           android:scaleType="centerInside"
-           android:paddingLeft="5dp"
-           android:background="@null" />
+    <RelativeLayout style="@style/title_style" >
 
-   </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_settingTitle"
+            style="@style/title_text_style"
+            android:text="设置" />
 
-   <TableLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:background="@drawable/white"
-       android:layout_margin="10dp" 
-       android:stretchColumns="2" >
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:paddingLeft="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+    </RelativeLayout>
 
-       <TableRow
-           android:id="@+id/tr_newMsgAlert"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_margin="5dp" 
-           >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/white"
+        android:stretchColumns="2" >
 
-           <TextView
-               android:id="@+id/tv_msgAlert"
-               style="@style/common_text_style"
-               android:text="消息提醒" />
+        <TableRow
+            android:id="@+id/tr_newMsgAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
 
-       </TableRow>
+            <TextView
+                android:id="@+id/tv_msgAlert"
+                style="@style/common_text_style"
+                android:text="消息提醒" />
+        </TableRow>
 
-       <TextView android:layout_width="fill_parent"
-           android:layout_height="0.5dp"
-           android:background="#f0f0f0" />
-       
-       <TableRow
-           android:id="@+id/tr_clearDialog"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" 
-           android:layout_margin="5dp">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#f0f0f0" />
 
-           <TextView
-               android:id="@+id/tv_deleteChatList"
-               style="@style/common_text_style"
-               android:text="清空对话列表" />
+        <TableRow
+            android:id="@+id/tr_clearDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
 
-       </TableRow>
+            <TextView
+                android:id="@+id/tv_deleteChatList"
+                style="@style/common_text_style"
+                android:text="清空对话列表" />
+        </TableRow>
 
-       <TextView android:layout_width="fill_parent"
-           android:layout_height="0.5dp"
-           android:background="#f0f0f0" />
-       
-       <TableRow
-           android:id="@+id/tr_setTheme"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content" 
-           android:layout_margin="5dp" >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="#f0f0f0" />
 
-           <TextView
-               android:id="@+id/tv_theme"
-               style="@style/common_text_style"
-               android:text="主题设置" />
+        <TableRow
+            android:id="@+id/tr_setTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
 
-       </TableRow>
-   </TableLayout>
+            <TextView
+                android:id="@+id/tv_theme"
+                style="@style/common_text_style"
+                android:text="主题设置" />
+        </TableRow>
+    </TableLayout>
 
-       
+    <TableRow
+        android:id="@+id/tr_about"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/white" >
 
-       <TableRow
-           android:id="@+id/tr_about"
-           android:layout_width="match_parent"
-           android:layout_height="40dp" 
-           android:layout_marginLeft="10dp"
-           android:layout_marginRight="10dp"
-           android:background="@drawable/white" >
-       
-           <TextView
-           android:id="@+id/tv_about"
-           style="@style/common_text_style"
-           android:text="关于我们"
-           android:layout_marginLeft="5dp"
-           android:layout_gravity="center_vertical"
-           />
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="关于我们"
+            android:textColor="#666666"
+            android:textSize="15sp" />
 
-           <TextView android:layout_width="wrap_content"
-               android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-           <ImageView
-               android:id="@+id/iv_about"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_gravity="center_vertical"
-               android:layout_marginLeft="180dp"
-               android:layout_marginRight="10dp"
-               android:src="@drawable/next" />
-           
-            <TextView android:layout_width="wrap_content"
-               android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-      </TableRow>
+        <ImageView
+            android:id="@+id/iv_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="180dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/next" />
+    </TableRow>
+
 </LinearLayout>
