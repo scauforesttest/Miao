@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#65c5f6" >
+
+    <ImageButton
+        android:id="@+id/ib_toSpeaking"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/speaking" />
+
+    <Button
+        android:id="@+id/btn_roomChatSend"
+        android:layout_width="60dip"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/ib_toSpeaking"
+        android:layout_alignBaseline="@id/ib_toSpeaking"
+        android:layout_weight="1"
+        android:text="发送"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_inputChat"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/btn_roomChatSend"
+        android:layout_toLeftOf="@id/btn_roomChatSend"
+        android:layout_toRightOf="@id/ib_toSpeaking"
+        android:layout_weight="4" />
+
+</RelativeLayout>

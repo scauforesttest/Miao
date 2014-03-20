@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#65c5f6"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/ib_toKeyboard"
+        android:layout_width="0dip"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/keyboard" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="#dcdcdc" />
+
+    <Button
+        android:id="@+id/btn_requestSpeech"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:background="@drawable/press_bg"
+        android:gravity="center"
+        android:text="我要说话"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="fill_parent"
+        android:background="#dcdcdc" />
+
+    <Button
+        android:id="@+id/btn_endSpeech"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:background="@drawable/press_bg"
+        android:gravity="center"
+        android:text="我讲完了"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>

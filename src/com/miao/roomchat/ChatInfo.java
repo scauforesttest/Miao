@@ -5,7 +5,10 @@ public class ChatInfo {
 	private String headPath;
 	private String audioPath;
 	private String userName;
-	private boolean isComeMessage;
+	private String content;
+	private String msgType;
+	private boolean isVoiceMsg;
+	private int index;
 	
 	
 	public void setUserName(String userName){
@@ -39,11 +42,36 @@ public class ChatInfo {
 		return audioPath;
 	}
 	
-	public void setMsgType(boolean bool){
-		isComeMessage=bool;
+	public void setContent(String content){
+		this.content=content;
 	}
 	
-	public boolean getMsgType(){
-		return isComeMessage;
+	public String getContent(){
+		return this.content;
+	}
+	
+	public void setMsgType(String  msg){
+		msgType=msg;
+	}
+	
+	public String getMsgType(){
+		return msgType;
+	}
+	
+	public void setChatType(boolean bool){
+		this.isVoiceMsg=bool;
+	}
+	
+	public boolean getChatType(){
+		return isVoiceMsg;
+	}
+	
+	public void setIndex(int index){
+		this.index=index;
+		
+	}
+	
+	public int getIndex(){
+		return this.index;
 	}
 }
