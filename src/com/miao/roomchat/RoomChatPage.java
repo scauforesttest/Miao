@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,12 +35,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.miao.main.R;
+import com.miao.util.Base64;
 
 public class RoomChatPage extends Activity {
 
 	private boolean isSpeakingMode=false;
-	private int index;
-	private int[] test={0,0,0,1,0,0,1,0,1};
 	private EditText et_inputChat;
 	private ImageButton ib_back,ib_roomMenu;
 	private Button btn_requestSpeech;
@@ -63,38 +63,6 @@ public class RoomChatPage extends Activity {
 		setContentView(R.layout.activity_room_chat_page);
 
 
-		//		btn_requestSpeech=(Button)findViewById(R.id.btn_requestSpeech);
-		//		btn_requestSpeech.setOnClickListener(new OnClickListener(){
-		//			@Override
-		//			public void onClick(View v){
-		//				String time=new DateFormat().format("hh:mm:ss", Calendar.getInstance(Locale.CHINESE))+"";
-		//				Toast.makeText(getApplicationContext(), "开始录音...", Toast.LENGTH_SHORT).show();
-		//				savedPath=getSavedDirectory();
-		//				recordAudio(savedPath);
-		//				ChatInfo entity=new ChatInfo();
-		//				entity.setAudioPath(savedPath);
-		//				entity.setTime(time);
-		//				entity.setHeadPath("");
-		//				entity.setUserName("我");
-		//				entity.setMsgType(false);
-		//				
-		//				chatData.add(entity);
-		//				
-		//				
-		//			}
-		//		});
-		//		
-		//		btn_endSpeech=(Button)findViewById(R.id.btn_endSpeech);
-		//		btn_endSpeech.setOnClickListener(new OnClickListener(){
-		//			@Override
-		//			public void onClick(View v){
-		//				stopRecord();
-		//				sendAudio();
-		//				myAdapter.notifyDataSetChanged();
-		//				lv_roomChatPage.setSelection(chatData.size()-1);
-		//			}
-		//		});
-
 
 		ib_roomMenu=(ImageButton)findViewById(R.id.ib_roomMenu);
 		ib_roomMenu.setOnClickListener(new OnClickListener(){
@@ -111,11 +79,13 @@ public class RoomChatPage extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
+				stopAll();
 				RoomChatPage.this.finish();
 			}
 
 		});
 
+		
 		lv_roomChatPage=(ListView)findViewById(R.id.lv_roomChatPage);
 		myAdapter=new MyAdapter(this,chatData);
 		lv_roomChatPage.setAdapter(myAdapter);
@@ -126,29 +96,28 @@ public class RoomChatPage extends Activity {
 		lv_chatMode.setAdapter(chatTypeAdapter);
 	}
 
-
-
 	public String getSavedDirectory(){ // 创建并返回存储文件父目录
 		String path;
 		if(!Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)){
 			path=this.getCacheDir()+"/Audio/";
-			Toast.makeText(getApplicationContext(),"SD卡不存在",Toast.LENGTH_SHORT).show();
 		}
 		else{ 
 			path=Environment.getExternalStorageDirectory()+"/Audio/";
-			Toast.makeText(getApplicationContext(),"SD卡存在",Toast.LENGTH_SHORT).show();
-			System.out.println("saved path : "+path );
 		}
 		File folder=new File(path);
 		if(!folder.exists()){
-			System.out.println("is successful? "+folder.mkdirs());
+			 folder.mkdirs();
 		}
-		System.out.println("is folder exists ? path:"+path +folder.exists());
+		// System.out.println("is folder exists ? path:"+path +folder.exists());
 		return path +getTime()+".amr";
 	}
 
 	public void recordAudio(String path){
 
+		if(mr!=null){
+			Toast.makeText(getApplicationContext(), "已经在录音状态了，不要频繁戳我好...", Toast.LENGTH_SHORT).show();
+			return ;
+		}
 		mr=new MediaRecorder();
 		mr.setAudioSource(MediaRecorder.AudioSource.MIC);
 		mr.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
@@ -177,9 +146,8 @@ public class RoomChatPage extends Activity {
 			mr.reset();
 			System.out.println("release");
 			mr.release();
-
 			mr=null;
-			Toast.makeText(getApplicationContext(), "录音结束", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), "录音结束，尝试发送...", Toast.LENGTH_SHORT).show();
 
 		}
 		else 
@@ -194,12 +162,13 @@ public class RoomChatPage extends Activity {
 		return time;
 	}
 
-
 	public void sendAudio(){
-		Toast.makeText(getApplicationContext(), "未连接服务，暂时无法发送", Toast.LENGTH_SHORT).show();
+		//Toast.makeText(getApplicationContext(), "发送...", Toast.LENGTH_SHORT).show();
 	}
 
 	public void playAudio(String path) throws Exception{
+
+		
 
 		if(mp!=null){
 			mp.stop();
@@ -221,6 +190,43 @@ public class RoomChatPage extends Activity {
 		}
 	}
 
+	public void stopAll(){
+		
+		if(mp!=null){
+			if(mp.isPlaying()){
+				mp.stop();
+				mp.reset();
+				mp.release();
+				mp=null;
+			}
+			else {
+				mp=null;
+			}
+			Toast.makeText(getApplicationContext(), "播放停止", Toast.LENGTH_SHORT).show();
+		}
+		if(mr!=null){
+			mr.stop();
+			mr.reset();
+			mr.release();
+			mr=null;
+			Toast.makeText(getApplicationContext(), "录音停止", Toast.LENGTH_SHORT).show();
+		}
+		
+	} 
+	
+	@Override
+	public boolean  onKeyDown(int keyCode , KeyEvent event){
+		super.onBackPressed();
+		if(keyCode==KeyEvent.KEYCODE_BACK&&event.getRepeatCount()==0){
+			
+			stopAll();
+			return false ;
+		}
+		
+		return false  ;
+		
+	}
+
 	class ListItemClickListener implements OnItemClickListener{
 
 		@Override
@@ -235,7 +241,6 @@ public class RoomChatPage extends Activity {
 		private TextView tv_speechTime;
 		private TextView tv_audio;
 	}
-
 
 	class MyAdapter extends BaseAdapter{
 
@@ -367,7 +372,7 @@ public class RoomChatPage extends Activity {
 			TextView tv_speechTime;
 			TextView tv_audio;
 		 
-			index=data.get(position).getIndex();
+			//index=data.get(position).getIndex();
 			
 			
 				if(data.get(position).getMsgType().equals("userAudio")){  // 信息来源为  好友
@@ -453,7 +458,6 @@ public class RoomChatPage extends Activity {
 		}
 	}
 
-
 	class ChatTypeAdapter extends BaseAdapter {
 
 		LayoutInflater mInflater ;
@@ -510,7 +514,7 @@ public class RoomChatPage extends Activity {
 
 					@Override
 					public void onClick(View v){
-						Toast.makeText(getApplicationContext(), "click", Toast.LENGTH_SHORT).show();
+						//Toast.makeText(getApplicationContext(), "click", Toast.LENGTH_SHORT).show();
 						isSpeakingMode=false;
 						chatTypeAdapter.notifyDataSetChanged();
 					}
@@ -520,8 +524,11 @@ public class RoomChatPage extends Activity {
 				btn_requestSpeech.setOnClickListener(new OnClickListener(){
 					@Override
 					public void onClick(View v){
+						if(mr!=null){
+							Toast.makeText(getApplicationContext(), "已经在录音状态了，不要频繁戳我好...", Toast.LENGTH_SHORT).show();
+							return ;
+						}
 						String time=new DateFormat().format("hh:mm:ss", Calendar.getInstance(Locale.CHINESE))+"";
-						Toast.makeText(getApplicationContext(), "开始录音...", Toast.LENGTH_SHORT).show();
 						savedPath=getSavedDirectory();
 						recordAudio(savedPath);
 						ChatInfo entity=new ChatInfo();
@@ -544,7 +551,8 @@ public class RoomChatPage extends Activity {
 				btn_endSpeech.setOnClickListener(new OnClickListener(){
 					@Override
 					public void onClick(View v){
-						stopRecord();
+						String code="";
+						stopRecord(); 
 						sendAudio();
 						myAdapter.notifyDataSetChanged();
 						lv_roomChatPage.setSelection(chatData.size()-1);
@@ -560,7 +568,7 @@ public class RoomChatPage extends Activity {
 
 					@Override
 					public void onClick(View v){
-						Toast.makeText(getApplicationContext(), "click", Toast.LENGTH_SHORT).show();
+						//Toast.makeText(getApplicationContext(), "click", Toast.LENGTH_SHORT).show();
 						isSpeakingMode=true ;
 						chatTypeAdapter.notifyDataSetChanged();
 

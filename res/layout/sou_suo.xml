@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<!-- 标题 -->
+    <TableLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="60sp"
+        android:background="@color/blue"
+        >
+        <TableRow >
+
+            <ImageView
+                android:id="@+id/fanhui"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="10sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/zuojiantou" />
+"
+            
+            <TextView 
+                android:id="@+id/sou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sou"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="40sp"
+                android:paddingLeft="50dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                >
+                
+            </TextView>
+                
+        </TableRow>
+    </TableLayout>
+    
+    <TableLayout 
+            android:id="@+id/sousuojiemian"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_weight="1"
+		    android:stretchColumns="1"
+		    android:layout_marginLeft="20sp"
+		    android:layout_marginRight="20sp"
+            >
+            
+            <TableRow 
+                android:id="@+id/xunzhaofujin"
+                android:background="@color/white_gray"
+                >
+                <ImageView 
+                    android:id="@+id/xunzhaofujin_pic"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:background="@color/white"
+                    android:src="@drawable/xunzhaofujin"/> 
+                    
+                <TextView 
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xunzhao"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                   
+                    /> 
+            </TableRow>
+            
+            <TableRow 
+                android:id="@+id/suijipipei"
+                android:background="@color/white_gray"
+                android:layout_marginTop="40sp"
+                >
+                <ImageView 
+                    android:id="@+id/suijipipei_pic"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:background="@color/black"
+                    android:src="@drawable/suijipipei"
+                    />   
+                <TextView 
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/suiji"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    
+                    />
+            </TableRow>
+            
+            <TableRow 
+                android:id="@+id/gaojisousuo"
+                android:background="@color/white_gray"
+                android:layout_marginTop="40sp"
+                >
+                <ImageView 
+                    android:id="@+id/gaojisousuo_pic"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:background="@color/black"
+                    android:src="@drawable/gaojisousuo"
+                    />   
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gaojisousuo"
+                    android:layout_gravity="center"
+                    
+                    />
+      
+            </TableRow>
+        </TableLayout>
+    
+</LinearLayout>

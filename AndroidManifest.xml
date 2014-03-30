@@ -45,6 +45,47 @@
             android:name="com.miao.singlechat.SingleChat"
             android:label="@string/title_activity_single_chat" >
         </activity>
+        
+        <activity
+            android:name="com.miao.singlechat.DanRenLiaoTianActivity"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        <activity
+            android:name="com.miao.singlechat.FuJinYongHuActivity"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        <activity
+            android:name="com.miao.singlechat.GaoJiSouSuoActivity"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        <activity
+            android:name="com.miao.singlechat.SouSuoActivity"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        <activity
+            android:name="com.miao.singlechat.SuijipipeiActivity"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        <activity
+            android:name="com.miao.singlechat.HaoYouActivity"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        
+        <activity
+            android:name="com.miao.singlechat.DogActionOne"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        
+        <activity
+            android:name="com.miao.singlechat.DogActionTwo"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        
+        <activity
+            android:name="com.miao.singlechat.DogActionThree"
+            android:label="@string/title_activity_single_chat" >
+        </activity>
+        
         <activity
             android:name="com.miao.zoom.Zoom"
             android:label="@string/title_activity_zoom" >

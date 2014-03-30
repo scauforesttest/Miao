@@ -1,0 +1,271 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DanLiaoMainActivity"
+    
+      >
+
+    <!-- 标题 -->
+    <TableLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        >
+        <TableRow >
+
+            <ImageView
+                android:id="@+id/sousuo"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_marginLeft="10sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sousuo" />
+"
+            
+            <TextView 
+                android:id="@+id/qiaoqiaohua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qiaoqiaohua"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="60sp"
+                >
+                
+            </TextView>
+
+            <ImageView
+                android:id="@+id/tianjia"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/tianjia"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="70sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                />
+                
+        </TableRow>
+    </TableLayout>
+    
+   
+    <!-- 聊天列表 -->
+    
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:scrollbars="none"
+        
+        >
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        
+        <TableLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_weight="1"
+		    android:stretchColumns="1"
+            >
+            
+            <TableRow 
+                android:id="@+id/liaotianliebiao1"
+                android:background="@color/white_gray"
+                >
+                <ImageView 
+                    android:id="@+id/tubiao1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/touxiang1"/> 
+                    
+                <TextView 
+                    android:id="@+id/nichen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nichen1"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    />
+                    
+                 <ImageView 
+                    android:id="@+id/youjiantou1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youjiantou"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30sp"/>   
+                
+            </TableRow>
+            
+            <TableRow 
+                android:id="@+id/liaotianliebiao2"
+                android:background="@color/white_gray"
+                android:layout_marginTop="10sp"
+                >
+                <ImageView 
+                    android:id="@+id/tubiao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/touxiang2"
+                    />   
+                <TextView 
+                    android:id="@+id/nichen2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nichen2"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    />
+                    
+                 <ImageView 
+                    android:id="@+id/youjiantou2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youjiantou"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30sp"/> 
+            </TableRow>
+            
+            <TableRow 
+                android:id="@+id/liaotianliebiao3"
+                android:background="@color/white_gray"
+                android:layout_marginTop="10sp"
+                >
+                <ImageView 
+                    android:id="@+id/tubiao3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/touxiang3"
+                    />   
+                <TextView 
+                    android:id="@+id/nichen3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nichen3"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    />
+                    
+                 <ImageView 
+                    android:id="@+id/youjiantou3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youjiantou"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30sp"/> 
+            </TableRow>
+        </TableLayout>
+        <!-- shishi -->
+        
+        <TableLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_weight="1"
+		    android:stretchColumns="1"
+            >
+            
+            <TableRow 
+                android:id="@+id/liaotianliebiao4"
+                android:background="@color/white_gray"
+                >
+                <ImageView 
+                    android:id="@+id/tubiao1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/touxiang1"/> 
+                    
+                <TextView 
+                    android:id="@+id/nichen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nichen1"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    />
+                    
+                 <ImageView 
+                    android:id="@+id/youjiantou1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youjiantou"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30sp"/>   
+                
+            </TableRow>
+            
+            <TableRow 
+                android:id="@+id/liaotianliebiao5"
+                android:background="@color/white_gray"
+                android:layout_marginTop="10sp"
+                >
+                <ImageView 
+                    android:id="@+id/tubiao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/touxiang2"
+                    />   
+                <TextView 
+                    android:id="@+id/nichen2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nichen2"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    />
+                    
+                 <ImageView 
+                    android:id="@+id/youjiantou2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youjiantou"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30sp"/> 
+            </TableRow>
+            
+            <TableRow 
+                android:id="@+id/liaotianliebiao6"
+                android:background="@color/white_gray"
+                android:layout_marginTop="10sp"
+                >
+                <ImageView 
+                    android:id="@+id/tubiao3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/touxiang3"
+                    />   
+                <TextView 
+                    android:id="@+id/nichen3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nichen3"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    />
+                    
+                 <ImageView 
+                    android:id="@+id/youjiantou3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youjiantou"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30sp"/> 
+            </TableRow>
+        </TableLayout>
+        <!-- shishi -->
+       </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
